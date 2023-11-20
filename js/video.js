@@ -38,8 +38,8 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	if (video.currentTime < video.duration - 15) {
-		video.currentTime += 15;
+	if (video.currentTime < video.duration - 10) {
+		video.currentTime += 10;
 	}
 	else {
 		video.currentTime = 0;
