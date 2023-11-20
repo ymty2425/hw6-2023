@@ -1,12 +1,20 @@
 // Add js here.
 var video = document.querySelector("#player1");
 
+const volumeControl = () => {
+	var volume = document.querySelector("#slider").value;
+	video.volume = volume / 100;
+	document.querySelector("#volume").innerHTML = volume + "%";
+	console.log("Volume is " + video.volume);
+}
+
 window.addEventListener("load", function() {
 	console.log("window loaded");
 	video.autoplay = false;
 	console.log("false autoplay");
 	video.loop = false;
 	console.log("false loop");
+	volumeControl();
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -53,10 +61,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#slider").addEventListener("change", function() {
-	console.log(this.value);
-	video.volume = this.value / 100;
-	document.querySelector("#volume").innerHTML = this.value + "%";
-	console.log("Volume is " + video.volume);
+	volumeControl();
 });
 
 document.querySelector("#vintage").addEventListener("click", function() {
