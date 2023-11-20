@@ -14,12 +14,12 @@ window.addEventListener("load", function() {
 	console.log("false autoplay");
 	video.loop = false;
 	console.log("false loop");
-	volumeControl();
 });
 
 document.querySelector("#play").addEventListener("click", function() {
 	video.play();
 	console.log("Play Video");
+	volumeControl();
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
